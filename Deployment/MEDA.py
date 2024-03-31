@@ -11,14 +11,14 @@ from zipfile import ZipFile
 
 # reading the cleand and splited data 
 # for the cleaning and feature engineering see the Notebook "Mid Project analysis"
-zip_file_path = "mohamedtalaat91/US-Accidents-Analysis/Deployment/source/US_data_cleand.zip"
+zip_file_path = "./Deployment/source/US_data_cleand.zip"
 with ZipFile(zip_file_path, 'r') as zip_ref:
     zip_ref.extractall()
 extracted_files = zip_ref.namelist()
 csv_file_name = extracted_files[0] 
 data = pd.read_csv(csv_file_name)
 
-zip_file_path = r"E:\Epsilon AI\MID PROJECT\Deployment\Source\accidents_conditions.zip"
+zip_file_path = ".\Deployment\Source\accidents_conditions.zip"
 with ZipFile(zip_file_path, 'r') as zip_ref:
     zip_ref.extractall()
 extracted_files = zip_ref.namelist()
