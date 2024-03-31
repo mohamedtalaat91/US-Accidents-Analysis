@@ -11,7 +11,7 @@ from zipfile import ZipFile
 
 # reading the cleand and splited data 
 # for the cleaning and feature engineering see the Notebook "Mid Project analysis"
-zip_file_path = r"E:\Epsilon AI\MID PROJECT\Deployment\source\US_data_cleand.zip"
+zip_file_path = "mohamedtalaat91/US-Accidents-Analysis/Deployment/source/US_data_cleand.zip"
 with ZipFile(zip_file_path, 'r') as zip_ref:
     zip_ref.extractall()
 extracted_files = zip_ref.namelist()
