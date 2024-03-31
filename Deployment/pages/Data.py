@@ -5,7 +5,7 @@ from zipfile import ZipFile
 
 
 
-zip_file_path = r"E:\Epsilon AI\MID PROJECT\Deployment\source\US_Accidents_March23_analysis.zip"
+zip_file_path = ./Deployment/source/US_Accidents_March23_analysis.zip"
 with ZipFile(zip_file_path, 'r') as zip_ref:
     zip_ref.extractall()
 extracted_files = zip_ref.namelist()
