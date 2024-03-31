@@ -13,7 +13,7 @@ from zipfile import ZipFile
 
 # reading the cleand and splited data 
 # read data
-zip_file_path = ".\Deployment\source\US_Accidents_March23_analysis.zip"
+zip_file_path = (r"./Deployment/source/US_Accidents_March23_analysis.zip")
 with ZipFile(zip_file_path, 'r') as zip_ref:
     zip_ref.extractall()
 extracted_files = zip_ref.namelist()
