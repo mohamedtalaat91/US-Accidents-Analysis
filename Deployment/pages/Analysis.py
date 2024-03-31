@@ -8,7 +8,7 @@ from streamlit_folium import folium_static
 import streamlit as st
 import sys 
 from zipfile import ZipFile
-sys.path.append("E:\Epsilon AI\MID PROJECT\Deployment")
+sys.path.append("./Deployment")
 import MEDA as md
 
 
