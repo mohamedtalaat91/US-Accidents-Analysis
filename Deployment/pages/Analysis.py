@@ -8,11 +8,11 @@ from streamlit_folium import folium_static
 import streamlit as st
 import sys 
 from zipfile import ZipFile
-sys.path.append("E:\Epsilon AI\MID PROJECT\Deployment")
+sys.path.append("./Deployment")
 import MEDA as md
 
 
-zip_file_path = "mohamedtalaat91/US-Accidents-Analysis/Deployment/source/US_data_cleand.zip"
+zip_file_path = "./Deployment/source/US_data_cleand.zip"
 with ZipFile(zip_file_path, 'r') as zip_ref:
     zip_ref.extractall()
 extracted_files = zip_ref.namelist()
