@@ -5,7 +5,7 @@ from zipfile import ZipFile
 
 
 
-zip_file_path = "mohamedtalaat91/US-Accidents-Analysis/Deployment/source/US_Accidents_March23_analysis.zip"
+zip_file_path = "./Deployment/source/US_Accidents_March23_analysis.zip"
 with ZipFile(zip_file_path, 'r') as zip_ref:
     zip_ref.extractall()
 extracted_files = zip_ref.namelist()
@@ -17,7 +17,7 @@ st.markdown('<a href ="https://www.kaggle.com/datasets/sobhanmoosavi/us-accident
 st.write(data)
 
 st.markdown('''<center> <h1> Used data after cleaning and feature engineering</h1> </center>''',unsafe_allow_html=True)
-zip_file_path = "mohamedtalaat91/US-Accidents-Analysis/Deployment/source/US_data_cleand.zip"
+zip_file_path = "./Deployment/source/US_data_cleand.zip"
 with ZipFile(zip_file_path, 'r') as zip_ref:
     zip_ref.extractall()
 extracted_files = zip_ref.namelist()
@@ -26,7 +26,7 @@ data_cleand = pd.read_csv(csv_file_name)
 st.write(data_cleand)
 
 st.markdown('''<center> <h1>Accident Conditions Data</h1> </center>''',unsafe_allow_html=True)
-zip_file_path = "mohamedtalaat91/US-Accidents-Analysis/Deployment/source/accidents_conditions.zip"
+zip_file_path = "./Deployment/source/accidents_conditions.zip"
 with ZipFile(zip_file_path, 'r') as zip_ref:
     zip_ref.extractall()
 extracted_files = zip_ref.namelist()
