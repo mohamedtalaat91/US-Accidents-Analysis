@@ -15,13 +15,13 @@ with tap1:
     st.markdown("<h3>1. SEVERITY ANALYSIS</h3>", unsafe_allow_html=True)
     st.markdown("<h6>1.1.  ABOUT SEVERITY</h6>", unsafe_allow_html=True)
     st.write("The severity of an accident is a measure of the impact the accident caused to the traffic.")
-    st.write("The severity is masured from low to high with 1 being the least severe and 4 being the most severe.")
+    st.write("The severity is measured from low to high with 1 being the least severe and 4 being the most severe.")
     st.markdown("<h6>1.2. SEVERITY PERCENTAGES</h6>", unsafe_allow_html=True)
     st.write("most of the accidents have severity measured as \"2\"  with percentage of \"79.7%\"")
     st.plotly_chart(md.show_severity())
 
     st.markdown("<h6>1.4. SEVERITY DISTRIBUTION MAP Over the US country</h6>", unsafe_allow_html=True)
-    st.write("This map shows the severity of accidents destributed over the country with ability to which severity value to show on the map.")
+    st.write("This map shows the severity of accidents distributed over the country with ability to which severity value to show on the map.")
     severity = st.multiselect("Choose severity",(1,2,3,4),default=[1,2,3,4], key="severity")
     st.plotly_chart(md.severity_map(severity))
 
@@ -32,7 +32,7 @@ with tap2:
     st.markdown("<h5>2.1.  ABOUT TIME</h5>", unsafe_allow_html=True)
     st.write("       The  start time of an accident is a measure of when the accident occurred.")
     st.write("       And the end time of an accident is a measure of when the accident Impact ended.")
-    st.write("       All accidents in the data occured between January 2016 and March 2023.")
+    st.write("       All accidents in the data occurred between January 2016 and March 2023.")
     st.write("       The time of an accident is measured in 24 hour format.")
     st.write("       The Data is cleaned and Time outliers are removed, the maximum Duration of an accident is 48 hours.")
 
@@ -41,13 +41,13 @@ with tap2:
 
     st.markdown("<h5> <br> <br> 2.2. TIME ElEMENTS</h5>", unsafe_allow_html=True)
     st.write("Analyzing each time element and what is the impact of time on the accidents.")
-    st.write("knownig the trends of Time and when will the accidents increase or decrease is very important to manange the Traffic and make a strong traffic managment plan in order to reduce the number of accidents.")
+    st.write("knowing  the trends of Time and when will the accidents increase or decrease is very important to manage  the Traffic and make a strong traffic management plan in order to reduce the number of accidents.")
     st.write("*note : The Data in 2023 is not complete (only the first 3 months of 2023)")
-    category =st.radio("CHOOSE TIME PARAMETER",('Year',"Month Name","Day Name","Hour","Season","Sunrise OR Sunset"), key="time",horizontal=True)
+    category =st.radio("CHOOSE TIME PARAMETER",("Year","Month Name","Day Name","Hour","Season","Sunrise OR Sunset"), key="time",horizontal=True)
     st.plotly_chart(md.time_analysis(category))
    
     st.markdown("<h5> <br> <br> 2.3. Customized Time series Analysis</h5>", unsafe_allow_html=True)
-    st.write("Analyzing each time element and its unique values and what is the difference between accidents destribution over each time element.")
+    st.write("Analyzing each time element and its unique values and what is the difference between accidents distribution over each time element.")
     st.write("its important to see what is the Impact of time over the accidents not on the hole data , you can also specify multiple values of time like a day or month of year or multiple values of them.")
     st.write("so if you want to analyze the accidents only in summer or in CORONAVIRUS period you can choose it.")
 
@@ -68,10 +68,10 @@ with tap2:
     st.write("The main Insights from the time series analysis are the following :")
     st.write("1. 2022 is the year with most number of accidents with 22.65% of all accidents.")
     st.write("2. December is the peak month with 25.48 % of the accidents ; its most likely to be because DEC is rainy and snow month and the roads most time is wet which affect the driving control.")
-    st.write("3. Winter and autumn is seasons with \"Weather fluctuations\" and has a huge impact on the accidents ocurrance both of them got a 28.5% , 27.44% of the accidents ")
-    st.write("4. most days have likly percentages put suterday and sunday is the lowest among them because its weekend and most of people is satying home in weekend ")
-    st.write("5. hours with most accedints is the typical start and end time of work \"the ruch hours\" 7 and 8 is the peak in the morning and 4 and 5 is the peak in the evening ")
-    st.write("6. the most accedints is made in the day light and its likely because the work hours ")
+    st.write("3. Winter and autumn is seasons with \"Weather fluctuations\" and has a huge impact on the accidents occurrence both of them got a 28.5% , 27.44% of the accidents ")
+    st.write("4. most days have likely percentages put Saturday and Sunday is the lowest among them because its weekend and most of people is staying home in weekend ")
+    st.write("5. hours with most accidents  is the typical start and end time of work \"the rush hours\" 7 and 8 is the peak in the morning and 4 and 5 is the peak in the evening ")
+    st.write("6. the most accidents is made in the day light and its likely because the work hours ")
     st.write("7. most accidents impact is under the 1 hour duration ")
 
 with tap3:
@@ -80,10 +80,10 @@ with tap3:
 
     st.markdown("<h5>3.1.  ABOUT WEATHER</h5>", unsafe_allow_html=True)
     st.write(" The weather is an important factor in determining the severity of an accident and its impact on the traffic.")
-    st.write (" There is strong relation between weather and the number of accedints that occures.")
+    st.write (" There is strong relation between weather and the number of accidents that occurs.")
     st.write(" To know wat is the weather condition there is more than one factor : \" Temperature , Humidity , Wind Speed and Visibility\"")
     st.write(" Each factor can be a cause of an accident ")
-    st.write(" Analyzing each weather condition can be very useful in traffic managment plans considering that the weather is predictable.")
+    st.write(" Analyzing each weather condition can be very useful in traffic management plans considering that the weather is predictable.")
 
 
     st.markdown("<h5> <br> <br> 3.2. WEATHER ELEMENTS ANALYSIS</h5>", unsafe_allow_html=True)
@@ -92,8 +92,8 @@ with tap3:
     st.markdown("<h5> <br> <br>  INSIGHTS</h5>", unsafe_allow_html=True)
     st.write("The main Insights from the WEATHER ANALYSIS are the following :")
     st.write("1. IN the Temperature range of (10 to 30) 67.47% of the road accidents occurred")
-    st.write("2. IN the Humidity range of (60 to 70) 15.96% of the road accidents occurred , For around 45.42% of road accident cases , the Humidit range is between (60 to 90)")
-    st.write("3. IN Maximun cases (81.34%) of road accidents , the Visivility range is between 15 km to 25 km.")
+    st.write("2. IN the Humidity range of (60 to 70) 15.96% of the road accidents occurred , For around 45.42% of road accident cases , the Humidity range is between (60 to 90)")
+    st.write("3. IN Maximum cases (81.34%) of road accidents , the Visibility range is between 15 km to 25 km.")
     st.write("4. IN the most cases around 40% of the accidents occurred while wind speed is between 7.5 kmh and 12.5 kmh.")
     st.write("5. the weather is predictable and it is one of the most effective factor in the accidents.")
     
@@ -140,8 +140,8 @@ with tap4:
     folium_static(map_us_heatmap)
 
     st.markdown("<h5> <br> <br> 3.2.  LOCATION ELEMENTS ANALYSIS</h5>", unsafe_allow_html=True)
-    st.write("this is an enteractive chart that shows the percentage of accidents in each location with the ability to choose the number of locations to show on the chart.")
-    st.write("note : The Smallest number of locations is a count not a percentage(the precentage is very small).")
+    st.write("this is an interactive chart that shows the percentage of accidents in each location with the ability to choose the number of locations to show on the chart.")
+    st.write("note : The Smallest number of locations is a count not a percentage(the percentage is very small).")
     col1, col2 = st.columns(2,gap="large")
     with col1:
         location = st.radio("Choose location",('City','State','County'), key="elements",horizontal=True)
@@ -164,16 +164,16 @@ with tap4:
     st.markdown("<h7>  SMALLEST INSIGHTS</h7>", unsafe_allow_html=True)
     st.write("  1.South Dakota is the city with lowest no. of road accidents.")
     st.write("  2. only 1800 accidents took place in South Dakota")
-    st.write("  3. There is a big number of cities that ocurred only one time (192) city")
-    st.write("  4. \"252\" counties have only one accident occured")
+    st.write("  3. There is a big number of cities that occurred only one time (192) city")
+    st.write("  4. \"252\" counties have only one accident occurred")
 
 
     st.markdown("<h5> <br> <br> TIME ZONE ANALYSIS </h5>",unsafe_allow_html=True)
     
     st.plotly_chart(md.time_zone())
     st.markdown("<h5> INSIGHTS </h5>",unsafe_allow_html=True)
-    st.write("1. Eastern time zone reagion of US has the highest no. of road accident cases (46.78%)")
-    st.write("2. Mountain time zone reagion of US has the lowest no. of road accident cases (5.5%)")
+    st.write("1. Eastern time zone region of US has the highest no. of road accident cases (46.78%)")
+    st.write("2. Mountain time zone region of US has the lowest no. of road accident cases (5.5%)")
 
     st.markdown("<h5> <br> <br> TIME ZONE MAP </h5>",unsafe_allow_html=True)
     st.write("This map shows the distribution of road accidents in the time zone of the US")
