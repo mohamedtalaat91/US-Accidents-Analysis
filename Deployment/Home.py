@@ -6,7 +6,7 @@ import streamlit as st
 st.markdown("<h1 style='text-align: center;'>US Accidents Analysis</h1>", unsafe_allow_html=True)
 st.markdown('''
 <center> <h5>
-            This project is for Analyizing US Accidents between 2016 and 2023.
+            This project is for Analyzing US Accidents between 2016 and 2023.
             </center> </h5>''',unsafe_allow_html=True)
 
 
