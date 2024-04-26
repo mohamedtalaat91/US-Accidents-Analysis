@@ -502,7 +502,7 @@ def time_zone_map(data=data):
         A Plotly figure object.
     """
     fig = px.scatter_mapbox(data, lat="start_lat", lon="start_lng", color_continuous_scale="RdYlGn",color_continuous_midpoint=0,
-                               zoom=3, height=600, hover_name="city", hover_data=["city", "county","state", "country"], render_mode='webgl')
+                               zoom=3, height=600, hover_name="city", hover_data=["city", "county","state", "country"])
 
     fig.update_layout(mapbox_style="open-street-map")
     fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
