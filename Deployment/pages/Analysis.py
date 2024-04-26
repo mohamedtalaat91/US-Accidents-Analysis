@@ -2,7 +2,7 @@ from streamlit_folium import folium_static
 import streamlit as st
 import sys 
 sys.path.append("Deployment")
-import MEDA2 as md
+import MEDA as md
 
 
 
