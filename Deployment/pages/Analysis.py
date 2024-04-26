@@ -20,7 +20,7 @@ with tap1:
     st.write("most of the accidents have severity measured as \"2\"  with percentage of \"79.7%\"")
     st.plotly_chart(md.show_severity())
 
-    st.markdown("<h6>1.4. SEVERITY DISTRIBUTION MAP Over the US country</h6>", unsafe_allow_html=True)
+    st.markdown("<h6>1.3. SEVERITY DISTRIBUTION MAP Over the US country</h6>", unsafe_allow_html=True)
     st.write("This map shows the severity of accidents distributed over the country with ability to which severity value to show on the map.")
     severity = st.multiselect("Choose severity",(1,2,3,4),default=[1,2,3,4], key="severity")
     st.plotly_chart(md.severity_map(severity))
@@ -75,7 +75,7 @@ with tap2:
     st.write("7. most accidents impact is under the 1 hour duration ")
 
 with tap3:
-    st.markdown("<h3>4. WEATHER ANALYSIS</h3>", unsafe_allow_html=True)
+    st.markdown("<h3>3. WEATHER ANALYSIS</h3>", unsafe_allow_html=True)
 
 
     st.markdown("<h5>3.1.  ABOUT WEATHER</h5>", unsafe_allow_html=True)
@@ -124,22 +124,22 @@ with tap3:
 
 with tap4:
 
-    st.markdown("<h3> 3. LOCATION ANALYSIS </h3>", unsafe_allow_html=True)
+    st.markdown("<h3> 4. LOCATION ANALYSIS </h3>", unsafe_allow_html=True)
 
-    st.markdown("<h5> <br> <br> 3.1.  ABOUT LOCATION</h5>", unsafe_allow_html=True)
+    st.markdown("<h5> <br> <br> 4.1.  ABOUT LOCATION</h5>", unsafe_allow_html=True)
     st.write("The location of an accident is where the accident occurred in country")
     st.write("IN this data there is more than one indicator of location. The data includes :")
     st.write("City,State,County,Country,Longitude,Latitude")
     st.write("We will use thes parameters to analyze and show the places that have a high number of road accidents.")
     st.write("This can help in holding the Traffic in order to reduce the number of accidents.")
 
-    st.markdown("<h5> <br> <br> 3.1.  HEAT MAP </h5>", unsafe_allow_html=True)
+    st.markdown("<h5> <br> <br> 4.2.  HEAT MAP </h5>", unsafe_allow_html=True)
     st.write("This is a heat map that shows the distribution of road accidents.")
     # Create a heatmap for the entire US using the create_heatmap function
     map_us_heatmap = md.create_heatmap()
     folium_static(map_us_heatmap)
 
-    st.markdown("<h5> <br> <br> 3.2.  LOCATION ELEMENTS ANALYSIS</h5>", unsafe_allow_html=True)
+    st.markdown("<h5> <br> <br> 4.3.  LOCATION ELEMENTS ANALYSIS</h5>", unsafe_allow_html=True)
     st.write("this is an interactive chart that shows the percentage of accidents in each location with the ability to choose the number of locations to show on the chart.")
     st.write("note : The Smallest number of locations is a count not a percentage(the percentage is very small).")
     col1, col2 = st.columns(2,gap="large")
