@@ -204,6 +204,7 @@ def show_severity():
     fig = go.Figure(go.Funnelarea(
         text = ["Severity - 2","Severity - 3", "Severity - 4", "Severity - 1"],
         values = severity_df.Cases,title= "the impact of accidents on the road"))
+    fig.update_layout(showlegend=False)  # This completely removes the legend
     return(fig)
 
 
