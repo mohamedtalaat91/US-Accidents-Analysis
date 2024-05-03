@@ -66,9 +66,9 @@ with tap2:
         st.plotly_chart(md.time_series(category,time_value,fig_num =5))
     st.markdown("<h5> <br> <br> 2.4. INSIGHTS</h5>", unsafe_allow_html=True)
     st.write("The main Insights from the time series analysis are the following :")
-    st.write("1. 2022 is the year with most number of accidents with 22.65% of all accidents.")
-    st.write("2. December is the peak month with 25.48 % of the accidents ; its most likely to be because DEC is rainy and snow month and the roads most time is wet which affect the driving control.")
-    st.write("3. Winter and autumn is seasons with \"Weather fluctuations\" and has a huge impact on the accidents occurrence both of them got a 28.5% , 27.44% of the accidents ")
+    st.write("1. 2022 is the year with most number of accidents with 22.76% of all accidents.")
+    st.write("2. December is the peak month with 10.78 % of the accidents ; its most likely to be because DEC is rainy and snow month and the roads most time is wet which affect the driving control.")
+    st.write("3. Winter and autumn is seasons with \"Weather fluctuations\" and has a huge impact on the accidents occurrence both of them got a 28.59% , 27.40% of the accidents ")
     st.write("4. most days have likely percentages put Saturday and Sunday is the lowest among them because its weekend and most of people is staying home in weekend ")
     st.write("5. hours with most accidents  is the typical start and end time of work \"the rush hours\" 7 and 8 is the peak in the morning and 4 and 5 is the peak in the evening ")
     st.write("6. the most accidents is made in the day light and its likely because the work hours ")
@@ -118,8 +118,8 @@ with tap3:
     st.plotly_chart(md.weather_occurance_per_year(time_value))
     st.markdown("<h5> <br> <br> INSIGHTS</h5>", unsafe_allow_html=True)
     st.write("The main Insights from the WEATHER CONDITION OCCURENCE are the following :")
-    st.write("Clear skies are the most common weather condition. The chart shows that clear skies account for almost half (45.74%) of all weather conditions")
-    st.write("Cloudy and rainy conditions are also relatively common. Cloudy skies make up 41.71% of all conditions, while rain accounts for 6.99%.")
+    st.write("Clear skies are the most common weather condition. The chart shows that clear skies account for almost half (45.77%) of all weather conditions")
+    st.write("Cloudy and rainy conditions are also relatively common. Cloudy skies make up 41.67% of all conditions, while rain accounts for 6.99%.")
     st.write("Overall, good visibility is the most common weather condition, with clear skies being the most frequent.  Cloudy conditions are also fairly common, but other conditions such as rain, fog, mist, haze, snow, and storms are less frequent")
 
 with tap4:
