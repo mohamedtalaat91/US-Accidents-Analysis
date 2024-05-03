@@ -10,6 +10,7 @@ from sklearn.impute import SimpleImputer
 from folium.plugins import HeatMap
 import streamlit as st
 from zipfile import ZipFile
+from sklearn.model_selection import train_test_split
 
 # reading the cleand and splited data 
 # read data
@@ -19,7 +20,7 @@ with ZipFile(zip_file_path, 'r') as zip_ref:
 extracted_files = zip_ref.namelist()
 csv_file_name = extracted_files[0] 
 data = pd.read_csv(csv_file_name)
-
+data_droped,data= train_test_split(data,test_size= 0.5,random_state = 42)
 
 '''----------------------------------------------------data cleaning--------------------------------------------------------'''
 
