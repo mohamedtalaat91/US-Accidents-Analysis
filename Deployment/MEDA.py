@@ -474,7 +474,7 @@ def time_zone(data=data):
     Returns:
         A Plotly figure object.
     """
-    timezone = data['timezone'].value_counts().sort_values(ascending=False) / len(data)
+    timezone = round(data['timezone'].value_counts().sort_values(ascending=False) / len(data) * 100,2)
 
     fig =  px.bar(timezone, x=timezone.index, y=timezone.values,text_auto= True,  # Add the values of each category as hover text
                   title="Percentage of Accidents per Timezone",  # Add title to the plot
