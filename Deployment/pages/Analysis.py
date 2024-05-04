@@ -163,7 +163,7 @@ with tap4:
     st.write("  9. About 26 % of the total accident record in US is only form the TOP 10 counties")
     st.markdown("<h7>  SMALLEST INSIGHTS</h7>", unsafe_allow_html=True)
     st.write("  1.South Dakota is the city with lowest no. of road accidents.")
-    st.write("  2. only 365 accidents took place in South Dakota")
+    st.write("  2. only 8 accidents took place in South Dakota")
     st.write("  3. There is a big number of cities that occurred only one time (192) city")
     st.write("  4. \"252\" counties have only one accident occurred")
 
