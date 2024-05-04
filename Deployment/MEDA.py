@@ -447,9 +447,7 @@ def location_analysis(location, num, sorting, data=data):
 
     elif sorting == "Smallest":
         # Get the smallest locations based on the number of accidents
-        smallest = data[location_c].value_counts().tail(num)
-        # Calculate the percentage of accidents that occurred in each location
-        smallest = smallest / len(data) * 100
+        smallest = data['state'].value_counts().tail(num)
         # Generate the bar plot
         fig = px.bar(smallest, x=smallest.index, y=smallest.values, text_auto=True,
                      title=f'Percentage of {location} occurance', color_discrete_sequence=px.colors.sequential.Emrld_r)
