@@ -320,7 +320,7 @@ def time_selector(date_category):
     date_category = date_category.replace(" OR ", "_").replace(" ", "_").lower()
 
     # Get a pandas Series containing all unique values of the given date category
-    date_category_counts = data[date_category].value_counts()
+    date_category_counts = round(data[date_category].value_counts(),2)
 
     # Return a list of all unique values of the given date category
     return date_category_counts.index.to_list()
@@ -393,7 +393,7 @@ def weather_occurance_per_year(time_value, data=data):
     date_data = data[data['year'].isin(time_value)]
 
     # Group the data by weather condition and count the number of occurrences
-    weather = date_data.groupby('weather_condition').size().nlargest(10) / len(date_data) * 100
+    weather = round(date_data.groupby('weather_condition').size().nlargest(10) / len(date_data) * 100,2)
 
     # Generate the bar plot
     fig = px.bar(weather, x=weather.index, y=weather.values, text_auto=True,
@@ -433,7 +433,7 @@ def location_analysis(location, num, sorting, data=data):
         # Get the largest locations based on the number of accidents
         largest = data[location_c].value_counts().head(num)
         # Calculate the percentage of accidents that occurred in each location
-        largest = largest / len(data) * 100
+        largest = round(largest / len(data) * 100,2)
         # Generate the bar plot
         fig = px.bar(largest, x=largest.index, y=largest.values, text_auto=True, title=f'Percentage of {location} occurance',
                      color_discrete_sequence=px.colors.sequential.Emrld_r)
